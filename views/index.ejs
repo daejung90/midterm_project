@@ -4,14 +4,16 @@
 <head>
   <title>Plot - Home Page</title>
 
-  <meta charset="UTF-8" >
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" /> -->
-  <!-- <link rel="stylesheet" href="/vendor/border-box.css" /> -->
-  <!-- <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="stylesheet" href="/styles/layout.css" /> -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Styling Bootstrap and CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" />
+  <link rel="stylesheet" href="/vendor/border-box.css" />
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="stylesheet" href="/styles/layout.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -19,28 +21,68 @@
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
   <script defer src="/scripts/index.js"></script>
 </head>
 
 <body>
+
+  <!-- nav bar -->
   <nav class="navbar navbar-light" style="background-color: #52616B;">
     <h3 style="color: white;">Plot</h3>
     <div>
       <ul class="nav justify-content-end">
         <li class="nav-item">
-      <img src="/images/avatar-nav.png" width="45" height="45" alt="">
-      </li>
-      <li class="nav-item">
-      <button type="button" class="btn btn-outline-light">LOGOUT</button>
-      </li>
+         <h5 style="color: white;">Username</h5>
+        </li>
+        <li class="nav-item">
+          <img src="/images/avatar-nav.png" width="40" height="40" alt="">
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-outline-light">LOGOUT</button>
+        </li>
     </div>
   </nav>
-  <!-- <h1>Have fun! 🥔</h1> -->
+
+  <!-- Create / Read Buttons -->
+  <br>
+  <div class="container">
+    <button type="button" class="btn btn-primary">create</button>
+    <button type="button" class="btn btn-primary">read</button>
+  </div>
+
+  <!-- story container -->
+  <br>
+  <main class="container-story">
+    <div>
+      <img src="/images/avatar-nav-dark.png" width="40" height="40" alt="">
+    </div>
+    <div>
+      <h5>Story name</h5>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque culpa ut dolorum blanditiis officiis, deserunt molestias dignissimos possimus delectus sapiente itaque reprehenderit, dolores omnis deleniti, incidunt minima eveniet fugiat sequi!
+</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small blue">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2023 Plot:
+      <a href="/"> Plot.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
 </body>
 
 </html>
