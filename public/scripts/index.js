@@ -1,4 +1,3 @@
-// Client facing scripts here
 
 // make AJAX request to sever
 // server is going to get the data
