@@ -36,12 +36,16 @@ const userApiRoutes = require("./routes/users-api");
 const widgetApiRoutes = require("./routes/widgets-api");
 const usersRoutes = require("./routes/users");
 
+const storyRoutes = require("./routes/stories");
+
 // Mount all resource routes
 // Note: Feel free to replace the example routes below with your own
 // Note: Endpoints that return data (eg. JSON) usually start with `/api`
 app.use("/api/users", userApiRoutes);
 app.use("/api/widgets", widgetApiRoutes);
 app.use("/users", usersRoutes);
+app.use("/stories", storyRoutes);
+
 const db = require("./db/connection");
 // Note: mount other resources here, using the same pattern above
 
@@ -53,18 +57,25 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/api/stories", (req, res) => {
-  db.query("SELECT * FROM stories").then((response) => {
-    res.send(response.rows);
-  });
-});
-
-app.get('/create', (req, res) => {
-  res.render('create');
-});
-
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
 
 //Testing new file
+
+// app.get("/login/:user_id", (req, res) => {
+//   res.cookie('userId', req.params.user_id)
+
+//   res.redirect("/")
+// })
+
+// app.get("/stories", (req, res) => {
+//   const currentUserId = req.cookies.userId
+//   databaseHelpers.getStoriesByUserId(currentUserId).then(stories => {
+//     res.render("stories", {stories})
+//   })
+// })
+
+// const getStoriesByUserId = userId => {
+//   db.query("SELECT * FROM stories WHERE user_id = $1", [userId])
+// }
